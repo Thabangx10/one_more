@@ -5,9 +5,466 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.rtl.min.css" integrity="sha384-T5m5WERuXcjgzF8DAb7tRkByEZQGcpraRTinjpywg37AO96WoYN9+hrhDVoM6CaT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/624d391deb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>About</title>
 </head>
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        width: 20%;
+        border-radius: 25%;
+      }
+    
+      .font-monospace{
+        text-align: center;
+      }
+
+      .header{
+        text-align: center;
+      }
+
+      .text-center{
+        text-align: center;
+      }
+
+      .contact{
+        text-align: center;
+      }
+
+      .tools{
+        text-align: center;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.progress-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px
+}
+
+.progress {
+    height: 20px;
+    background: #333;
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible
+}
+
+.progress .progress-bar {
+    position: relative;
+    -webkit-animation: animate-positive 2s;
+    animation: animate-positive 2s
+}
+
+
+body {
+    background: linear-gradient(to right, black, #fffcdc)
+}
+
+.footer-16371 {
+    padding: 7rem 0;
+    font-family: "Poppins", sans-serif; }
+    .footer-16371 .footer-site-logo {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900; }
+      .footer-16371 .footer-site-logo a {
+        color: #4200ff; }
+    .footer-16371 .nav-links {
+      padding: 0;
+      margin: 0; }
+      .footer-16371 .nav-links li {
+        display: inline-block; }
+        .footer-16371 .nav-links li a {
+          padding: 10px;
+          color: #000; }
+          .footer-16371 .nav-links li a:hover {
+            color: #4200ff; }
+    .footer-16371 .social h3 {
+      font-weight: bold;
+      font-size: 18px;
+      color: #000; }
+    .footer-16371 .social ul li {
+      display: inline-block; }
+      .footer-16371 .social ul li a {
+        display: inline-block;
+        padding: 10px; }
+      .footer-16371 .social ul li.in a {
+        color: #df588a; }
+      .footer-16371 .social ul li.tw a {
+        color: #15b8ff; }
+      .footer-16371 .social ul li.fb a {
+        color: #3742d0; }
+      .footer-16371 .social ul li.dr a {
+        color: #fa38c1; }
+      .footer-16371 .social ul li.pin a {
+        color: #dd4d5a; }
+    .footer-16371 .copyright {
+      color: #999999; }
+
+/* Timeline styling */
+* {
+  box-sizing: border-box;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -28%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 28%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+</style>
 <body>
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Thabang Kganana</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Portfolio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="../html/about.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    About
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../html/about.html#">Education / Work experience</a></li>
+                    <li><a class="dropdown-item" href="../html/about.html#">Projects</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="../html/testimonial.html">Testimonial</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../html/contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <a href="/index.html"><img src="/images/Profile.JPG" alt="Chilling" class="center" id="home" loading="lazy"></a>
+      <br>
+      <p class="font-monospace">I'm  a aspiring Software Engineer, looking to specialise in database management<br> and software development</p>
+      <br><br><br>
+      <h1 class="header" id="heading">
+        ABOUT ME
+      </h1>
+      <br>
+      <p class="font-monospace">I am a hungry south african youth looking to always upskill himself with the <br> latest tech stacks due to the fast pace of the industry. Began self-teaching myself <br>(3 years from today) to code and at the same time attending various online events and bootcamps.<br>I am currently studying web and sofware development at Life Choices Academy.</p>
+      <div class="text-center">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <a href="https://www.linkedin.com/in/thabangkganana/"><button class="btn btn-primary" type="button"> Download CV / Resume </button></a>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h2> Fall of 2021 - present</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium debitis adipisci exercitationem, quasi corrupti optio dolorem veritatis saepe quis distinctio similique, ab tenetur repellat harum explicabo perferendis, unde delectus doloremque!
+            Qui magnam, tenetur recusandae natus quia voluptas, perferendis maxime laboriosam enim corporis dignissimos rerum temporibus assumenda! Iure ullam at ea. Unde, reiciendis corporis. Nostrum repellat laborum iusto facilis eum dicta.
+            Voluptas sunt dolor fuga fugiat asperiores possimus quas aliquid eius officiis officia quos quo voluptate placeat, quam excepturi iste earum doloribus molestias cupiditate? Odit nostrum culpa animi. Iusto, sed nobis.</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>2018 - 2021</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsam aspernatur obcaecati ad eaque voluptatum perspiciatis neque, beatae praesentium quo aliquid commodi ex! Aliquam numquam, reiciendis nihil est enim fugiat!</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h2>2017</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium debitis adipisci exercitationem, quasi corrupti optio dolorem veritatis saepe quis distinctio similique, ab tenetur repellat harum explicabo perferendis, unde delectus doloremque!
+              Qui magnam, tenetur recusandae natus quia voluptas, perferendis maxime laboriosam enim corporis dignissimos rerum temporibus assumenda! Iure ullam at ea. Unde, reiciendis corporis. Nostrum repellat laborum iusto facilis eum dicta.
+              Voluptas sunt dolor fuga fugiat asperiores possimus quas aliquid eius officiis officia quos quo voluptate placeat, quam excepturi iste earum doloribus molestias cupiditate? Odit nostrum culpa animi. Iusto, sed nobis.</p>
+            </div>
+        </div>
+      </div>
+<br><br><br><br><br><br>
+<h1 class="tools" id="tools">
+    TOOLS
+  </h1>
+  <br><br>
+  <h2>Front-end:</h2>
+<div class="container2">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="progress-title">HTML</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width:85%; background:#97c513;">
+                    <div class="progress-value">85%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">CSS</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width:70%; background:#f2545b;">
+                    <div class="progress-value">70%</div>
+                </div>
+            </div>
+            <h3 class="progress-title">JAVASCRIPT</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width:100%; background:#4286f4;">
+                    <div class="progress-value">Pending Module</div>
+                </div>
+            </div>
+            <h3 class="progress-title">BOOTSTRAP</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width:60%; background:#21ff63;">
+                    <div class="progress-value">60%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<h2>Back-end:</h2>
+<div class="container2">
+  <div class="row">
+      <div class="col-md-12">
+          <h3 class="progress-title">C</h3>
+          <div class="progress">
+              <div class="progress-bar" style="width:65%; background:#97c513;">
+                  <div class="progress-value">65%</div>
+              </div>
+          </div>
+          <h3 class="progress-title">PYTHON</h3>
+          <div class="progress">
+              <div class="progress-bar" style="width:80%; background:#f2545b;">
+                  <div class="progress-value">80%</div>
+              </div>
+          </div>
+          <h3 class="progress-title">MYSQL</h3>
+          <div class="progress">
+              <div class="progress-bar" style="width:75%; background:#4286f4;">
+                  <div class="progress-value">75%</div>
+              </div>
+          </div>
+          <h3 class="progress-title">LINUX</h3>
+          <div class="progress">
+              <div class="progress-bar" style="width:80%; background:#21ff63;">
+                  <div class="progress-value">80%</div>
+              </div>
+          </div>
+          <h3 class="progress-title">GIT</h3>
+          <div class="progress">
+              <div class="progress-bar" style="width:90%; background:red">
+                  <div class="progress-value">90%</div>
+              </div>
+          </div>
+          <h3 class="progress-title">NGINX</h3>
+          <div class="progress">
+            <div class="progress-bar" style="width:60%; background:#21ff63;">
+                <div class="progress-value">60%</div>
+            </div>
+      </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br>
+<h1 style="text-align:center;">PROJECTS</h1>
+<br><br><br><br>
+
+
+<br><br><br><br><br><br><br><br><br>
+<footer class="footer-16371">
+    <div class="container2">
+      <div class="row justify-content-center">
+        <div class="col-md-9 text-center">
+          <div class="footer-site-logo mb-4">
+            <a href="https://lifechoicesacademy.com/">Life Choices Academy</a>
+          </div>
+          <ul class="list-unstyled nav-links mb-5">
+            <li><a href="../html/about.html">About</a></li>
+            <li><a href="../html/testimonial.html">Testimonials</a></li>
+            <li><a href="../html/contact.html">Contact</a></li>
+          </ul>
+
+          <div class="social mb-4">
+            <h3>Persistence</h3>
+            <ul class="list-unstyled">
+                <a href="https://github.com/Thabangx10"><i class="fa-brands fa-github fa-fade fa-sm"></i></a> 
+                <a href="https://www.linkedin.com/in/thabangkganana/"><i class="fa-brands fa-linkedin-in fa-fade fa-sm"></i></a>
+            </ul>
+          </div>
+
+          <div class="copyright">
+            <p class="mb-0"><small>&copy; Portfolio. All Rights Reserved.</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
